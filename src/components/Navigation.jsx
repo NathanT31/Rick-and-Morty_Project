@@ -43,8 +43,9 @@ function Navigation({ page, setPage, pages }) {
     <div className="flex justify-between gap-1.5 md:gap-3">
       <BtnPrimary
         onClick={handlePrevPage}
-        content={"Prev"}
+        content={"Prev page"}
         disabled={disablePrevButton}
+        icon={"fa-chevron-left"}
       />
       <div className="flex gap-1.5 md:gap-3">
         <BtnPrimary onClick={handleStartPage} content={"1"} />
@@ -59,8 +60,9 @@ function Navigation({ page, setPage, pages }) {
       </div>
       <BtnPrimary
         onClick={handleNextPage}
-        content={"Next"}
+        content={"Next page"}
         disabled={disableNextButton}
+        icon={"fa-chevron-right"}
       />
     </div>
   );

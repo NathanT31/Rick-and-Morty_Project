@@ -1,7 +1,3 @@
-{
-  /* Agregar flecha al boton "Find Characters" */
-}
-
 import { Link } from "react-router-dom";
 
 import imageRickMorty from "../assets/img/rick-morty.png";
