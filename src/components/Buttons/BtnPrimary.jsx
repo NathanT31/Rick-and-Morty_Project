@@ -1,3 +1,7 @@
+{
+  /* Agregar la posibilidad de tener un icono en el boton */
+}
+
 const sizes = {
   base: "px-3 md:px-5 py-2 md:py-2.5 text-xs md:text-base font-medium",
   xl: "px-5 md:px-6 py-2.5 md:py-3.5 text-base font-bold",

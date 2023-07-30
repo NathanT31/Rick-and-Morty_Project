@@ -1,3 +1,7 @@
+{
+  /* Falta agregar las flechas de direccion a los botones de navegacion entre paginas y tal vez hacer que cuando se esté en movil, el texto no apareza, solo las flechas */
+}
+
 import { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 
