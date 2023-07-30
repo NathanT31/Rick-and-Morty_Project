@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  /* @apply bg-gradient-to-b from-zinc-900 to-zinc-800; */
+  /* @apply bg-zinc-800; */
+  scroll-behavior: smooth;
+}
