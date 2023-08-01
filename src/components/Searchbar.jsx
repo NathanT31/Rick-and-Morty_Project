@@ -1,9 +1,3 @@
-{
-  /* 
-    Queda pendiente hacer la funcionalidad de la barra de tareas (que busque ps) y agregar 2 dots para escoger entre buscar personaje o ubicacion
- */
-}
-
 import { forwardRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -11,7 +5,7 @@ function SearchBarButton({
   name = "name",
   parent = "parent",
   icon = "ban",
-  defaultChecked = false,
+  defaultChecked,
 }) {
   return (
     <div>
