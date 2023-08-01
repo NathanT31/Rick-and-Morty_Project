@@ -2,33 +2,33 @@ import { useState, useEffect } from "react";
 
 import BtnPrimary from "./Buttons/BtnPrimary";
 
-function Navigation({ page, setPage, pages }) {
+function Navigation({ page, pages, changePage }) {
   const [disablePrevButton, setDisablePrevButton] = useState(false);
   const [disableNextButton, setDisableNextButton] = useState(false);
   const [handlePage, setHandlePage] = useState(page);
 
   const handlePrevPage = () => {
     const prevPage = page - 1;
-    if (!disablePrevButton) setPage(prevPage);
+    if (!disablePrevButton) changePage(prevPage);
   };
 
   const handleNextPage = () => {
     const nextPage = page + 1;
-    if (!disableNextButton) setPage(nextPage);
+    if (!disableNextButton) changePage(nextPage);
   };
 
   const handleStartPage = () => {
-    if (page !== 1) setPage(1);
+    if (page !== 1) changePage(1);
   };
 
   const handleEndPage = () => {
-    if (page !== pages) setPage(pages);
+    if (page !== pages) changePage(pages);
   };
 
   const handleInputKeyPress = (e) => {
     if (e.key === "Enter") {
       if (!isNaN(handlePage) && handlePage >= 1 && handlePage <= pages) {
-        setPage(handlePage);
+        changePage(handlePage);
       }
     }
   };
@@ -36,7 +36,8 @@ function Navigation({ page, setPage, pages }) {
   useEffect(() => {
     setDisablePrevButton(page <= 1);
     setDisableNextButton(page >= pages);
-    // window.scrollTo(0, 0);
+    setHandlePage(page);
+    window.scrollTo(0, 0);
   }, [page, pages]);
 
   return (

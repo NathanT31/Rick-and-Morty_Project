@@ -4,7 +4,7 @@
  */
 }
 
-import { forwardRef } from "react";
+import { forwardRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function SearchBarButton({
@@ -34,47 +34,42 @@ function SearchBarButton({
   );
 }
 
-function Searchbar({ isSearchBarActive }, ref) {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Realizar aquí cualquier acción que desees en lugar de enviar una petición HTTP.
-    // Por ejemplo, puedes realizar validaciones o modificar el estado de la aplicación.
-    console.log(
-      "Formulario enviado, pero no se realizará ninguna petición HTTP."
-    );
-  };
-
+const Searchbar = forwardRef(function Searchbar(
+  { isSearchBarActive, handleInputChange },
+  ref
+) {
   return (
     <div className="relative px-5 flex mt-2">
       <form
-        onSubmit={handleSubmit}
+        onSubmit={handleInputChange}
         className={`flex w-full rounded-lg overflow-hidden transition-all duration-500 ease-in-out ring-4 ${
           !isSearchBarActive ? "h-0 ring-transparent" : "h-10 ring-zinc-200"
         }`}
       >
         <input
+          id="handleSearch"
           ref={ref}
           type="search"
-          id="default-search"
-          className={`w-full h-full px-4 bg-zinc-200 transition-all duration-500 ease-in-out focus:font-medium focus:bg-white outline-none`}
+          name="handleSearch"
           placeholder="Search"
+          className={`w-full h-full px-4 bg-zinc-200 transition-all duration-500 ease-in-out focus:font-medium focus:bg-white outline-none`}
         ></input>
         <div className="flex items-center border-l-4 border-zinc-200">
           <SearchBarButton
             name="character"
-            parent="search-by"
+            parent="searchBy"
             icon="person"
             defaultChecked
           />
           <SearchBarButton
             name="location"
-            parent="search-by"
+            parent="searchBy"
             icon="location-dot"
           />
         </div>
       </form>
     </div>
   );
-}
+});
 
-export default forwardRef(Searchbar);
+export default Searchbar;
