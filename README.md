@@ -1,1 +1,0 @@
-# Rick-and-Morty_Project

@@ -11,10 +11,10 @@ function Characters({
 }) {
   return (
     <div className="flex flex-col gap-10">
-      <span className="text-3xl font-bold text-indigo-500 text-start animate__animated animate__zoomIn">
+      <h1 className="text-3xl font-bold text-indigo-500 text-start animate__animated animate__zoomIn">
         {(searchQuery && searchQuery != "" ? "Found: " : "All characters: ") +
           count}
-      </span>
+      </h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-5 mx-auto content-center place-content-center justify-center">
         {data.map((character) => (
           <CharacterCard character={character} key={"char_" + character.id} />

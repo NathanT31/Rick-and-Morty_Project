@@ -22,7 +22,11 @@ function NavbarRender({
           <NavbarButton link={"/characters"} icon="fa-users" text="Chars" />
 
           {/* Posteriormente, implementar las ubicaciones */}
-          <NavbarButton icon="fa-location-dot" text="Locations" />
+          <NavbarButton
+            link={"/locations"}
+            icon="fa-location-dot"
+            text="Locations"
+          />
           {/* Posteriormente, implementar las ubicaciones */}
         </ul>
         {actualLocation.pathname !== "/" && (

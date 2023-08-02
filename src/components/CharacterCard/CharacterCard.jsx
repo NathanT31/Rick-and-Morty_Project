@@ -8,13 +8,13 @@ function CharacterCard({ character }) {
 
   return (
     <div
-      key={id}
-      className="CARD flex flex-col sm:flex-row sm:max-w-xl bg-white rounded-lg overflow-hidden capitalize animate__animated animate__fadeInRight transition hover:drop-shadow-lg"
+      key={`char_${id}`}
+      className="CHAR-CARD flex flex-col sm:flex-row sm:max-w-xl bg-white rounded-lg overflow-hidden capitalize animate__animated animate__fadeInRight transition hover:drop-shadow-lg"
     >
-      <div className="CARD-IMG w-full sm:w-2/5 max-h-72 sm:max-h-full">
+      <div className="CHAR-CARD-IMG w-full sm:w-2/5 max-h-72 sm:max-h-full">
         <img className="w-full h-full object-cover" src={image} alt={name} />
       </div>
-      <div className="CARD-MAIN flex flex-col w-full sm:w-3/5 p-4 font-medium gap-5 justify-between">
+      <div className="CHAR-CARD-MAIN flex flex-col w-full sm:w-3/5 p-4 font-medium gap-5 justify-between">
         <CardHeader
           name={name}
           url={url}

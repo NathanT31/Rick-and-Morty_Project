@@ -7,8 +7,10 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 library.add(fas);
 
 import Home from "./pages/Home";
-import DataPageController from "./controllers/DataPageController";
 import NavBar from "./components/Navbar/Navbar";
+import DataPageController from "./controllers/DataPageController";
+import Locations from "./pages/Locations";
+import Page404 from "./pages/Page404";
 import { SearchContextProvider } from "./scripts/SearchContext";
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
                 path="/characters/:page?"
                 element={<DataPageController />}
               />
+              <Route path="/locations/" element={<Locations />} />
+              <Route path="*" element={<Page404 />} />
             </Routes>
           </div>
         </SearchContextProvider>
