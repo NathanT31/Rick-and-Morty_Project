@@ -1,16 +1,9 @@
 import CharacterCard from "../components/CharacterCard/CharacterCard";
 import Navigation from "../components/Navigation";
 
-function Characters({
-  data,
-  page,
-  pages,
-  count,
-  searchQuery,
-  handleChangePage,
-}) {
+function Characters({ data, page, pages, setPage, count, searchQuery }) {
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-10 my-10">
       <h1 className="text-3xl font-bold text-indigo-500 text-start animate__animated animate__zoomIn">
         {(searchQuery && searchQuery != "" ? "Found: " : "All characters: ") +
           count}
@@ -21,7 +14,12 @@ function Characters({
         ))}
       </div>
       {pages > 1 ? (
-        <Navigation page={page} pages={pages} changePage={handleChangePage} />
+        <Navigation
+          page={page}
+          pages={pages}
+          setPage={setPage}
+          searchQuery={searchQuery}
+        />
       ) : (
         <></>
       )}

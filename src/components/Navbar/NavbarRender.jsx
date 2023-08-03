@@ -10,6 +10,7 @@ function NavbarRender({
   handleToggleSearchbar,
   searchBarRef,
   actualLocation,
+  handleChangePage,
 }) {
   return (
     <header className="flex flex-col">
@@ -19,15 +20,12 @@ function NavbarRender({
         </NavLink>
 
         <ul className="DESKTOP-MENU flex grow gap-3 justify-end items-center">
-          <NavbarButton link={"/characters"} icon="fa-users" text="Chars" />
-
-          {/* Posteriormente, implementar las ubicaciones */}
+          <NavbarButton page={"characters"} icon="fa-users" text="Chars" />
           <NavbarButton
-            link={"/locations"}
+            page={"locations"}
             icon="fa-location-dot"
             text="Locations"
           />
-          {/* Posteriormente, implementar las ubicaciones */}
         </ul>
         {actualLocation.pathname !== "/" && (
           <NavbarSearchButton

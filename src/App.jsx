@@ -6,12 +6,13 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 
 library.add(fas);
 
+import { SearchContextProvider } from "./scripts/SearchContext";
+
 import Home from "./pages/Home";
 import NavBar from "./components/Navbar/Navbar";
-import DataPageController from "./controllers/DataPageController";
-import Locations from "./pages/Locations";
 import Page404 from "./pages/Page404";
-import { SearchContextProvider } from "./scripts/SearchContext";
+import CharactersController from "./controllers/CharactersController";
+import LocationsController from "./controllers/LocationsController";
 
 function App() {
   return (
@@ -24,9 +25,12 @@ function App() {
               <Route exact path="/" element={<Home />} />
               <Route
                 path="/characters/:page?"
-                element={<DataPageController />}
+                element={<CharactersController />}
               />
-              <Route path="/locations/" element={<Locations />} />
+              <Route
+                path="/locations/:page?"
+                element={<LocationsController />}
+              />
               <Route path="*" element={<Page404 />} />
             </Routes>
           </div>

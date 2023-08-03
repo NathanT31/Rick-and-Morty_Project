@@ -1,7 +1,7 @@
 const characterStatusColor = {
-  alive: "bg-green-500",
-  dead: "bg-red-500",
-  unknown: "bg-gray-500",
+  Alive: "bg-green-500",
+  Dead: "bg-red-500",
+  Unknown: "bg-gray-500",
 };
 
 function CardHeader({ name, url, status, species }) {

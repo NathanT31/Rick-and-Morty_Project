@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function NavbarButton({ link = "", icon = "", text = "nav button" }) {
+function NavbarButton({ page = "", icon = "", text = "nav button" }) {
   return (
     <NavLink
-      to={link}
+      to={`/${page}/`}
       className={({ isActive }) =>
         isActive ? "text-indigo-600" : "hover:text-indigo-500"
       }

@@ -1,11 +1,11 @@
-import { forwardRef, useState } from "react";
+import { forwardRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function SearchBarButton({
   name = "name",
   parent = "parent",
   icon = "ban",
-  defaultChecked,
+  checked = false,
 }) {
   return (
     <div>
@@ -15,7 +15,7 @@ function SearchBarButton({
         name={parent}
         value={name}
         className="hidden peer"
-        defaultChecked={defaultChecked}
+        required
       />
       <label
         htmlFor={name}
@@ -49,12 +49,7 @@ const Searchbar = forwardRef(function Searchbar(
           className={`w-full h-full px-4 bg-zinc-200 transition-all duration-500 ease-in-out focus:font-medium focus:bg-white outline-none`}
         ></input>
         <div className="flex items-center border-l-4 border-zinc-200">
-          <SearchBarButton
-            name="character"
-            parent="searchBy"
-            icon="person"
-            defaultChecked
-          />
+          <SearchBarButton name="character" parent="searchBy" icon="person" />
           <SearchBarButton
             name="location"
             parent="searchBy"

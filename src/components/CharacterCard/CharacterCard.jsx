@@ -15,12 +15,7 @@ function CharacterCard({ character }) {
         <img className="w-full h-full object-cover" src={image} alt={name} />
       </div>
       <div className="CHAR-CARD-MAIN flex flex-col w-full sm:w-3/5 p-4 font-medium gap-5 justify-between">
-        <CardHeader
-          name={name}
-          url={url}
-          status={status.toLowerCase()}
-          species={species}
-        />
+        <CardHeader name={name} url={url} status={status} species={species} />
         <CardContent
           episodes={episode.length}
           lastLocationName={location.name}

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useContext } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import { SearchContext } from "../../scripts/SearchContext";
 import NavbarRender from "./NavbarRender";
@@ -9,9 +9,9 @@ function NavBar() {
   const searchBarRef = useRef(null);
 
   const actualLocation = useLocation();
+  const navigate = useNavigate();
 
-  const { searchQuery, setSearchQuery, setTypeQuery } =
-    useContext(SearchContext);
+  const { searchQuery, setSearchQuery } = useContext(SearchContext);
 
   const handleInputChange = (event) => {
     event.preventDefault();
@@ -20,7 +20,11 @@ function NavBar() {
     }
 
     if (event.target.searchBy) {
-      setTypeQuery(event.target.searchBy.value);
+      event.target.searchBy.value === "character"
+        ? navigate("/characters/")
+        : event.target.searchBy.value === "location"
+        ? navigate("/locations/")
+        : null;
     }
     // console.log(event.target.handleSearch.value);
     // console.log(event.target.searchBy.value);

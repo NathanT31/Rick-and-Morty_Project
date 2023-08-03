@@ -15,7 +15,7 @@ function Home() {
           alt="Rick & Morty"
           className="max-h-[420px] w-2/10"
         />
-        <Link to="/characters">
+        <Link to="/characters/">
           <BtnPrimary content="Find characters" size={"xl"} />
         </Link>
       </div>
