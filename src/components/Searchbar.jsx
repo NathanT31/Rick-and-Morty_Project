@@ -35,6 +35,7 @@ const Searchbar = forwardRef(function Searchbar(
   return (
     <div className="relative px-5 flex mt-2">
       <form
+        ref={ref}
         onSubmit={handleInputChange}
         className={`flex w-full rounded-lg overflow-hidden transition-all duration-500 ease-in-out ring-4 ${
           !isSearchBarActive ? "h-0 ring-transparent" : "h-10 ring-zinc-200"
@@ -42,7 +43,7 @@ const Searchbar = forwardRef(function Searchbar(
       >
         <input
           id="handleSearch"
-          ref={ref}
+          // ref={ref}
           type="search"
           name="handleSearch"
           placeholder="Search"

@@ -35,9 +35,20 @@ function NavBar() {
   };
 
   useEffect(() => {
-    if (isSearchBarActive && actualLocation.pathname != "/") {
-      searchBarRef.current.focus();
-      searchBarRef.current.value = searchQuery;
+    if (isSearchBarActive && actualLocation.pathname !== "/") {
+      if (actualLocation.pathname === "/characters/") {
+        searchBarRef.current.character.checked = true;
+      }
+
+      if (actualLocation.pathname === "/locations/") {
+        searchBarRef.current.location.checked = true;
+      }
+
+      searchBarRef.current.handleSearch.focus();
+      searchBarRef.current.handleSearch.value = searchQuery;
+      // searchBarRef.current.focus();
+      // searchBarRef.current.value = searchQuery;
+      // console.log(searchBarRef.current.location.checked);
     }
   }, [isSearchBarActive, actualLocation, searchQuery]);
 
