@@ -8,7 +8,7 @@ function Locations({ data, page, pages, setPage, count, searchQuery }) {
         {(searchQuery && searchQuery != "" ? "Found: " : "All locations: ") +
           count}
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 mx-auto content-center place-content-center justify-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-x-5 gap-y-10 mx-auto content-center place-content-center justify-center">
         {data.map((location) => (
           <LocationCard location={location} key={"loc_" + location.id} />
         ))}

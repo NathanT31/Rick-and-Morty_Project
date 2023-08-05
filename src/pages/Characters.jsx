@@ -8,7 +8,7 @@ function Characters({ data, page, pages, setPage, count, searchQuery }) {
         {(searchQuery && searchQuery != "" ? "Found: " : "All characters: ") +
           count}
       </h1>
-      <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-5 mx-auto content-center place-content-center justify-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-x-5 gap-y-10 mx-auto content-center place-content-center justify-center">
         {data.map((character) => (
           <CharacterCard character={character} key={"char_" + character.id} />
         ))}

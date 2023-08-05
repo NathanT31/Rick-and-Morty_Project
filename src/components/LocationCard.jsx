@@ -3,7 +3,7 @@ function LocationCard({ location }) {
   return (
     <div
       key={`loc_${id}`}
-      className="LOC-CARD max-w-md bg-white rounded-lg overflow-hidden drop-shadow-md capitalize"
+      className="LOC-CARD max-w-md bg-white rounded-lg overflow-hidden transition hover:drop-shadow-lg capitalize"
     >
       <div className="bg-indigo-600 text-white px-6 py-4">
         <h2 className="text-xl font-bold">{name}</h2>

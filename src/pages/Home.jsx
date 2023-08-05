@@ -15,9 +15,14 @@ function Home() {
           alt="Rick & Morty"
           className="max-h-[420px] w-2/10"
         />
-        <Link to="/characters/">
-          <BtnPrimary content="Find characters" size={"xl"} />
-        </Link>
+        <div className="flex gap-5">
+          <Link to="/characters/">
+            <BtnPrimary content="Find characters" size={"xl"} />
+          </Link>
+          <Link to="/locations/">
+            <BtnPrimary content="Find locations" size={"xl"} />
+          </Link>
+        </div>
       </div>
     </div>
   );
