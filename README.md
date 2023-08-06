@@ -13,22 +13,26 @@ Este es un proyecto personal. Es una página web creada con React, React Router,
 
 Recientemente se alcanzó la version 1.0 del proyecto, donde se incluyen las caracteristicas antes mencionadas, y se lanzo bajo la etiqueta v1.0. Posteriormente se seguirán añadiendo nuevas funcionalidades al proyecto cómo la opción de utilizar un tema oscuro y el desarrollo de una vista de cada personaje más amplia y detallada.
 
-<!-- Actualizar Capturas de pantalla !!! -->
-## Capturas de pantalla
+<details>
+<summary>Capturas de pantalla</summary>
 
 ### Macbook Pro
 
 <center>
-<img src="https://i.imgur.com/xRn3ix4.jpg" alt="Macbook Pro Home">
-<img src="https://i.imgur.com/TrPup3X.jpg" alt="Macbook Pro Home">
+<img src="https://i.imgur.com/RJtR01W.jpg" alt="Macbook Pro Home">
+<img src="https://i.imgur.com/yRGLrTv.jpg" alt="Macbook Pro Characters">
+<img src="https://i.imgur.com/Tz1SmpY.jpg" alt="Macbook Pro Locations">
+<img src="https://i.imgur.com/Ro0ThLB.jpg" alt="Macbook Pro Navigation">
 </center>
 
 ---
 
 ### iPad
+
 <center>
-    <img src="https://i.imgur.com/pRSNCVs.jpg" alt="iPad Home" width="45%">
-    <img src="https://i.imgur.com/OckDua5.jpg" alt="iPad Characters" width="45%">
+    <img src="https://i.imgur.com/afa0atZ.jpg" alt="iPad Home" width="35%">
+    <img src="https://i.imgur.com/OFqPmtH.jpg" alt="iPad Characters" width="35%">
+    <img src="https://i.imgur.com/k6zsZAD.jpg" alt="iPad Locations" width="35%">
 </center>
 
 ---
@@ -36,9 +40,11 @@ Recientemente se alcanzó la version 1.0 del proyecto, donde se incluyen las car
 ### iPhone 12 Pro
 
 <center>
-    <img src="https://i.imgur.com/qecOinA.jpg" alt="iPhone 12 Pro Home" width="45%">
-    <img src="https://i.imgur.com/QxcrQmF.jpg" alt="iPhone 12 Pro Characters" width="45%">
+    <img src="https://i.imgur.com/PxzIR3a.jpg" alt="iPhone 12 Pro Home" width="35%">
+    <img src="https://i.imgur.com/Jhmwqfq.jpg" alt="iPhone 12 Pro Characters" width="35%">
+    <img src="https://i.imgur.com/YjIYM0V.jpg" alt="iPhone 12 Pro Locations" width="35%">
 </center>
+</details>
 
 ---
 
