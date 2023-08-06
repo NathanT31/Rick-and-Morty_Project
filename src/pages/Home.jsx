@@ -6,8 +6,8 @@ import BtnPrimary from "../components/Buttons/BtnPrimary";
 function Home() {
   return (
     <div className="animate__animated animate__zoomIn">
-      <div className="flex flex-col place-content-center justify-center items-center gap-10">
-        <h1 className="text-5xl sm:text-6xl font-bold text-center mt-10">
+      <div className="flex flex-col place-content-center justify-center items-center gap-10 my-10">
+        <h1 className="text-5xl sm:text-6xl font-bold text-center">
           The Rick and Morty Characters
         </h1>
         <img

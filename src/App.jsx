@@ -13,6 +13,7 @@ import NavBar from "./components/Navbar/Navbar";
 import Page404 from "./pages/Page404";
 import CharactersController from "./controllers/CharactersController";
 import LocationsController from "./controllers/LocationsController";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
       <Router>
         <SearchContextProvider>
           <NavBar></NavBar>
-          <div className="flex flex-col container mx-auto p-6 place-content-center">
+          <div className="flex flex-col container min-h-screen mx-auto p-6 place-content-center items-center justify-center">
             <Routes>
               <Route exact path="/" element={<Home />} />
               <Route
@@ -34,6 +35,7 @@ function App() {
               <Route path="*" element={<Page404 />} />
             </Routes>
           </div>
+          <Footer />
         </SearchContextProvider>
       </Router>
     </div>
