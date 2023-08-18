@@ -1,44 +1,52 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "animate.css";
 
+import { SearchContextProvider } from "./scripts/SearchContext";
+
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
-
 library.add(fas);
-
-import { SearchContextProvider } from "./scripts/SearchContext";
 
 import Home from "./pages/Home";
 import NavBar from "./components/Navbar/Navbar";
-import Page404 from "./pages/Page404";
+import PrincipalContentLayout from "./layouts/PrincipalContentLayout";
 import CharactersController from "./controllers/CharactersController";
 import LocationsController from "./controllers/LocationsController";
+import Page404 from "./pages/Page404";
 import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen text-zinc-800">
+    <>
       <Router>
         <SearchContextProvider>
-          <NavBar></NavBar>
-          <div className="flex flex-col container min-h-screen mx-auto p-6 place-content-center items-center justify-center">
+          <div className="bg-zinc-100 text-zinc-800">
+            <NavBar></NavBar>
             <Routes>
               <Route exact path="/" element={<Home />} />
               <Route
                 path="/characters/:page?"
-                element={<CharactersController />}
+                element={
+                  <PrincipalContentLayout>
+                    <CharactersController />
+                  </PrincipalContentLayout>
+                }
               />
               <Route
                 path="/locations/:page?"
-                element={<LocationsController />}
+                element={
+                  <PrincipalContentLayout>
+                    <LocationsController />
+                  </PrincipalContentLayout>
+                }
               />
               <Route path="*" element={<Page404 />} />
             </Routes>
           </div>
-          <Footer />
         </SearchContextProvider>
       </Router>
-    </div>
+      <Footer />
+    </>
   );
 }
 

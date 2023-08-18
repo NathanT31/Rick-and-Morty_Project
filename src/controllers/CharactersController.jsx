@@ -1,54 +1,60 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext, useRef, useCallback } from "react";
+import Pagination from "../components/Pagination/Pagination";
 
-import ApiDataFetcher from "../scripts/ApiDataFetcher";
+import DataFetcherAPI from "../scripts/DataFetcherAPI";
 import { SearchContext } from "../scripts/SearchContext";
 
 import Characters from "../pages/Characters";
 
 function CharactersController() {
-  const [page, setPage] = useState(1);
-  const [isSearchQueryChanged, setIsSearchQueryChanged] = useState(false);
-  const [isPageChanged, setIsPageChanged] = useState(false);
+  const { info, results, isLoading, error, fetchData } = DataFetcherAPI();
 
-  const { data, info, busy, fetchData } = ApiDataFetcher();
   const { searchQuery } = useContext(SearchContext);
 
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const fetchDataRef = useRef();
+  fetchDataRef.current = fetchData;
+
   useEffect(() => {
-    setIsSearchQueryChanged(true);
+    setCurrentPage(1);
+    fetchDataRef.current({ type: "character", params: `name=${searchQuery}` });
   }, [searchQuery]);
 
-  useEffect(() => {
-    setIsPageChanged(true);
-  }, [page]);
+  const handlePageClick = useCallback(
+    ({ selected }) => {
+      setCurrentPage(selected + 1);
+      fetchDataRef.current({
+        type: "character",
+        params: `name=${searchQuery}&page=${selected + 1}`,
+      });
+    },
+    [searchQuery]
+  );
 
-  useEffect(() => {
-    if (!busy) {
-      if (isSearchQueryChanged) {
-        setPage(1);
-        setIsSearchQueryChanged(false);
-        fetchData(1, "character", searchQuery);
-      } else if (isPageChanged) {
-        setIsPageChanged(false);
-        fetchData(page, "character", searchQuery);
-      }
+  const renderCharacters = () => {
+    if (isLoading) {
+      return <div>Loading...</div>;
     }
-  }, [page, searchQuery, isSearchQueryChanged, isPageChanged]);
+
+    if (error) {
+      return <div>Ha ocurrido un error</div>;
+    }
+
+    return (
+      <Characters info={info} results={results} searchQuery={searchQuery} />
+    );
+  };
 
   return (
-    <>
-      {data && info ? (
-        <Characters
-          data={data}
-          page={page}
-          pages={info.pages}
-          setPage={setPage}
-          count={info.count}
-          searchQuery={searchQuery}
-        />
-      ) : (
-        <h1>Not found</h1>
-      )}
-    </>
+    <div className="flex flex-col">
+      {renderCharacters()}
+      <Pagination
+        pageCount={info.pages}
+        handlePageClick={handlePageClick}
+        currentPage={currentPage}
+      />
+    </div>
   );
 }
 
