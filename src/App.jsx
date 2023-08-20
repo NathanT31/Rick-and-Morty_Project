@@ -10,7 +10,7 @@ library.add(fas);
 import Home from "./pages/Home";
 import NavBar from "./components/Navbar/Navbar";
 import PrincipalContentLayout from "./layouts/PrincipalContentLayout";
-import CharactersController from "./controllers/CharactersController";
+import CharactersController from "./pages/Characters/CharactersController";
 import LocationsController from "./controllers/LocationsController";
 import Page404 from "./pages/Page404";
 import Footer from "./components/Footer";
@@ -20,12 +20,12 @@ function App() {
     <>
       <Router>
         <SearchContextProvider>
-          <div className="bg-zinc-100 text-zinc-800">
+          <div className="bg-zinc-100 text-zinc-800 scroll-smooth">
             <NavBar></NavBar>
             <Routes>
               <Route exact path="/" element={<Home />} />
               <Route
-                path="/characters/:page?"
+                path="/characters/:characterId?"
                 element={
                   <PrincipalContentLayout>
                     <CharactersController />
@@ -33,7 +33,7 @@ function App() {
                 }
               />
               <Route
-                path="/locations/:page?"
+                path="/locations/"
                 element={
                   <PrincipalContentLayout>
                     <LocationsController />
