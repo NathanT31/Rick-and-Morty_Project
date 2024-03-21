@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-import NavbarButton from "./NavbarButton";
+import NavbarButton from "../Buttons/NavbarButton/NavbarButton";
 import NavbarSearchButton from "./NavbarSearchButton";
 import Searchbar from "../Searchbar";
 
@@ -13,19 +13,19 @@ function NavbarRender({
   handleChangePage,
 }) {
   return (
-    <header className="flex flex-col">
+    <header className="flex flex-col container mx-auto">
       <nav className="flex h-14 px-5 gap-6 items-center justify-between text-lg border-b border-zinc-200 tracking-tight">
         <NavLink to="/" className="LOGO text-xl font-bold text-indigo-600">
           <span>R&M Project</span>
         </NavLink>
 
         <ul className="DESKTOP-MENU flex grow gap-3 justify-end items-center">
-          <NavbarButton page={"characters"} icon="fa-users" text="Chars" />
-          <NavbarButton
-            page={"locations"}
-            icon="fa-location-dot"
-            text="Locations"
-          />
+          <NavbarButton page={"characters"} icon="fa-users">
+            Characters
+          </NavbarButton>
+          <NavbarButton page={"locations"} icon="fa-location-dot">
+            Locations
+          </NavbarButton>
         </ul>
         {actualLocation.pathname !== "/" && (
           <NavbarSearchButton

@@ -1,17 +1,28 @@
 # Rick and Morty Project
 
-Este es un proyecto personal. Es una página web creada con React, React Router, TailwindCSS, NodeJS y ViteJS. Está centrado en la serie animada "Rick and Morty". Se basa y hace uso de la API [The Rick and Morty API](https://rickandmortyapi.com/). Actualmente se está lanzando la v1.0 del proyecto.
+Este es un proyecto personal. Es una página web creada con React, TailwindCSS, NodeJS y ViteJS. Está centrada en la serie animada <b>Rick and Morty</b> y brinda información sobre los personajes y mundos de la serie animada de <b>HBO</b>. Hace uso de la API <b>[The Rick and Morty API](https://rickandmortyapi.com/)</b> by Axel Fuhrmann.
 
-## Características v1.0
+## Versión 1.1
 
-- Navegación a través de personajes y ubicaciones de la serie.
-- Información sobre cada personaje y ubicación.
-- Búsqueda de personajes y ubicaciones por nombre.
-- Diseño responsivo para adaptarse a diferentes dispositivos.
+¡La versión 1.1 de "Rick and Morty Project" ha llegado con emocionantes novedades y mejoras!
+
+### Cambios Visuales y Estéticos
+
+- Se han realizado importantes cambios visuales y estéticos para mejorar la apariencia general del sitio.
+- La experiencia de renderización se ha optimizado para una navegación más fluida y agradable.
+
+### Nuevas funcionalidades
+
+- <b>Vista Ampliada de Personajes</b>: Ahora puedes explorar cada personaje de la serie en una vista ampliada y más detallada. Obtén información detallada, curiosidades y más sobre tus personajes favoritos.
+- <b>Mejor Indexación de Páginas</b>: Se ha mejorado la indexación de páginas para proporcionar una navegación más óptima y cómoda para el usuario. Encuentra rápidamente lo que buscas con una organización mejorada del contenido.
+
+### Correción de Bugs
+
+- Se han corregido múltiples errores y bugs reportados por la comunidad para garantizar una experiencia sin problemas.
 
 ## Estado del proyecto
 
-Recientemente se alcanzó la version 1.0 del proyecto, donde se incluyen las caracteristicas antes mencionadas, y se lanzo bajo la etiqueta v1.0. Posteriormente se seguirán añadiendo nuevas funcionalidades al proyecto cómo la opción de utilizar un tema oscuro y el desarrollo de una vista de cada personaje más amplia y detallada.
+Recientemente se lanzó la version 1.1 del proyecto, donde se incluyen las caracteristicas antes mencionadas. Se seguirán añadiendo nuevas funcionalidades al proyecto cómo la opción de utilizar un tema oscuro.
 
 <details>
 <summary>Capturas de pantalla</summary>
@@ -19,10 +30,9 @@ Recientemente se alcanzó la version 1.0 del proyecto, donde se incluyen las car
 ### Macbook Pro
 
 <center>
-<img src="https://i.imgur.com/RJtR01W.jpg" alt="Macbook Pro Home">
-<img src="https://i.imgur.com/yRGLrTv.jpg" alt="Macbook Pro Characters">
-<img src="https://i.imgur.com/Tz1SmpY.jpg" alt="Macbook Pro Locations">
-<img src="https://i.imgur.com/Ro0ThLB.jpg" alt="Macbook Pro Navigation">
+<img src="https://imgur.com/3FTmfaN.jpg" alt="Macbook Pro Home">
+<img src="https://imgur.com/YxENNCC.jpg" alt="Macbook Pro Characters">
+<img src="https://imgur.com/oTn9p7L.jpg" alt="Macbook Pro Locations">
 </center>
 
 ---
@@ -30,9 +40,7 @@ Recientemente se alcanzó la version 1.0 del proyecto, donde se incluyen las car
 ### iPad
 
 <center>
-    <img src="https://i.imgur.com/afa0atZ.jpg" alt="iPad Home" width="35%">
-    <img src="https://i.imgur.com/OFqPmtH.jpg" alt="iPad Characters" width="35%">
-    <img src="https://i.imgur.com/k6zsZAD.jpg" alt="iPad Locations" width="35%">
+    <img src="https://imgur.com/D1BU9Xv.jpg" alt="iPad Home" width="">
 </center>
 
 ---
@@ -40,9 +48,7 @@ Recientemente se alcanzó la version 1.0 del proyecto, donde se incluyen las car
 ### iPhone 12 Pro
 
 <center>
-    <img src="https://i.imgur.com/PxzIR3a.jpg" alt="iPhone 12 Pro Home" width="35%">
-    <img src="https://i.imgur.com/Jhmwqfq.jpg" alt="iPhone 12 Pro Characters" width="35%">
-    <img src="https://i.imgur.com/YjIYM0V.jpg" alt="iPhone 12 Pro Locations" width="35%">
+    <img src="https://imgur.com/YwNlBc6.jpg" alt="iPhone 12 Pro Home" width="">
 </center>
 </details>
 

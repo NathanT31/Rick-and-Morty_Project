@@ -8,7 +8,7 @@ function SearchBarButton({
   checked = false,
 }) {
   return (
-    <div>
+    <div className="h-full">
       <input
         type="radio"
         id={name}

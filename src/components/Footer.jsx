@@ -29,8 +29,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition"
           >
-            <FontAwesomeIcon icon={faGithub} size="md" className="mx-1" />{" "}
-            GitHub
+            <FontAwesomeIcon icon={faGithub} className="mx-1" /> GitHub
           </a>
           {/* <span className="mx-2 text-gray-400">|</span> */}
           {/* Agrega más enlaces aquí si es necesario */}
@@ -43,11 +42,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition"
           >
-            <FontAwesomeIcon
-              icon="fa-solid fa-code"
-              size="md"
-              className="mx-1"
-            />{" "}
+            <FontAwesomeIcon icon="fa-solid fa-code" className="mx-1" />{" "}
             <span className="underline">{developerName}</span>
           </a>{" "}
           <span className="mx-2 text-gray-400 font-extrabold">·</span>
