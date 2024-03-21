@@ -1,6 +1,7 @@
 {
   "name": "rick-and-morty",
   "private": true,
+  "homepage": "https://nathant31.github.io/Rick-and-Morty_Project/",
   "version": "1.1.0",
   "type": "module",
   "scripts": {

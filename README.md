@@ -1,8 +1,8 @@
 # Rick and Morty Project
 
-Este es un proyecto personal. Es una página web creada con React, TailwindCSS, NodeJS y ViteJS. Está centrada en la serie animada <b>Rick and Morty</b> y brinda información sobre los personajes y mundos de la serie animada de <b>HBO</b>. Hace uso de la API <b>[The Rick and Morty API](https://rickandmortyapi.com/)</b> by Axel Fuhrmann.
+Este es un proyecto personal. Es una página web creada con React, TailwindCSS, NodeJS y ViteJS. Está centrada en la serie animada <b>Rick and Morty</b> y brinda información sobre los personajes y mundos de la serie animada de <b>HBO</b>. Hace uso de la API <b target="_blank">[The Rick and Morty API](https://rickandmortyapi.com/)</b> by Axel Fuhrmann.
 
-<b style="font-size: 1.5rem">[¡Échale un vistaso!](https://nathant31.github.io/Rick-and-Morty_Project/)</b>
+<b target="_blank" style="font-size: 1.5rem">[¡Échale un vistaso!](https://nathant31.github.io/Rick-and-Morty_Project/)</b>
 
 ## Versión 1.1
 
