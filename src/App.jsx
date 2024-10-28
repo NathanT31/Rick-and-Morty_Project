@@ -24,6 +24,7 @@ function App() {
             <NavBar></NavBar>
             <Routes>
               <Route exact path="/" element={<Home />} />
+              <Route exact path="/Rick-and-Morty_Project" element={<Home />} />
               <Route
                 path="/characters/:characterId?"
                 element={
